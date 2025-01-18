@@ -8,6 +8,7 @@ Este projeto exemplo demostrando um sistema registrador de logs assíncrono util
 - adicione um arquivo `.env`
 - execute `composer install`
 - execute `php artisan key:generate`
+- execute `php artisan migrate`
 
 2. O diretório `rabbitmq_service` contém o docker-compose.yaml com as configurações de um container do RabbitMQ
 - entre no diretório e execute `docker up -d`
@@ -16,9 +17,9 @@ Este projeto exemplo demostrando um sistema registrador de logs assíncrono util
 - acesse `http://localhost:15672/`
 - use o login "guest" e a senha "guest"
 - vá na aba "Queues and Streams"
-- crie as filas "app_todo_list" e "app_file_uploader"
+- crie as filas "app_file_uploader" e "app_todo_list"
 - vincule essas filas à exchange "amq.direct"
-    - adicione as respectivas routing keys "app.todo_list" e "app.file_uploader" para as filas "app_todo_list" e "app_file_uploader"
+    - adicione as respectivas routing keys "app.file_uploader" e "app.todo_list" para as filas "app_file_uploader" e "app_todo_list"
 
 4. Para testar
 - para os projetos "consumer", execute o comando `php artisan queue:work`
