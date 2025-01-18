@@ -25,3 +25,7 @@ Este projeto exemplo demostrando um sistema registrador de logs assíncrono util
 - para os projetos "consumer", execute o comando `php artisan queue:work`
 - os projetos "app" são os producers, neles execute `php artisan play {logType}` para enviar mensagens
 - dependendo de qual app enviou a mensagem, o respectivo consumer vai exibir um resultado.
+
+## Esquema das filas
+
+[Esquema das filas](./rabbitmq_service/queue_schema.png)
