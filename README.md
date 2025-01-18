@@ -28,4 +28,4 @@ Este projeto exemplo demostrando um sistema registrador de logs assíncrono util
 
 ## Esquema das filas
 
-[Esquema das filas](./rabbitmq_service/queue_schema.png)
+![Esquema das filas](./rabbitmq_service/queue_schema.png)
